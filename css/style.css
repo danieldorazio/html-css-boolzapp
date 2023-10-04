@@ -8,6 +8,7 @@
 --color-sky-blue:#8edafc;
 --color-gray-header: #eaeaea;
 --color-white: #ffffff;
+--color-gray-icons: #b1b1b1;
 
     /*heigth-contacts*/
     --header: 60px;
@@ -32,6 +33,14 @@ ul {
     list-style-type: none;
 }
 
+img {
+    max-width: 100%;
+}
+
+button {
+    border: 0;
+}
+
 /********************
         common      *
 ********************/
@@ -47,8 +56,25 @@ ul {
     border: 1px solid #b1b1b1;
 }
 
+/*btn*/
+.btn-profile {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+}
+
+.header ul.flex {
+    gap: 1rem;
+    margin-right: 1.2rem;
+} 
+.header .icons{
+    font-size: 1.2rem;
+    color: var(--color-gray-icons);
+}
 /********************
-        wrapper    *
+wrapper    *
 ********************/
 
 .wrapper {
@@ -81,7 +107,7 @@ container-large   *
         width: 100%;
         height: 100vh;
     }
-
+    
     .container-large {
         width: 100%;
         height: 100%;
@@ -92,12 +118,29 @@ container-large   *
        contacts     *
 ********************/
 
-.contacts {
+#contacts {
     height: 100%;
     width: 40%;
     min-width: 200px;
     background-color: var(--color-white);
 }
+
+/*CONTACTS HEADER*/
+#contacts .header.flex {
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.profile{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+
 
 .notification {
     height:var(--notification);
@@ -136,7 +179,7 @@ container-large   *
 
 /*tablet*/ 
 @media screen and (max-width: 540px) {
-    .contacts {
+    #contacts {
         width: 60px;
         min-width: 60px;
           /*de vedere bene al di sotto taglia l'immagine*/
@@ -145,7 +188,7 @@ container-large   *
 
 /*mobile*/
 @media screen and (max-width: 375px) {
-    .contacts {
+    #contacts {
         display: none;
     }    
 }
@@ -159,9 +202,7 @@ container-large   *
 .chat {
     height: 100%;
     width: 60%;
-
-    /*debug*/
-    background-color: rgb(33, 96, 151);
+    background-image: url(../img/mine.jpg);
 }
 
 .chat.flex {
