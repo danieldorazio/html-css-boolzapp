@@ -2,12 +2,19 @@
         ROOT      *
 ********************/
 :root {
+    /*color*/
 --color-green-exit:#009688;
 --color-gray-exit: #d3dbda;
 --color-sky-blue:#8edafc;
 --color-gray-header: #eaeaea;
 --color-white: #ffffff;
+
+    /*heigth-contacts*/
+    --header: 60px;
+    --notification: 70px;
+    --search-chat: 40px;
 }
+
 
 
 
@@ -34,7 +41,7 @@ ul {
 
 .header {
     width: 100%;
-    height: 10%;
+    height: var(--header);
     background-color:var(--color-gray-header);
     /*debug*/
     border: 1px solid #b1b1b1;
@@ -63,6 +70,8 @@ container-large   *
 .container-large {
     width: 80%;
     height: 90%;
+    max-width: 1000px;
+    min-width: 540px;
     margin: 0 auto;
 }
 
@@ -77,11 +86,6 @@ container-large   *
         width: 100%;
         height: 100%;
     }
-
-    /*debug*/
-    .header {
-        background-color: #6b0096;
-    }
 }
 
 /********************
@@ -91,28 +95,59 @@ container-large   *
 .contacts {
     height: 100%;
     width: 40%;
+    min-width: 200px;
     background-color: var(--color-white);
 }
 
 .notification {
-    height:12%;
+    height:var(--notification);
     width: 100%;
     background-color:var(--color-sky-blue) ;
 }
 
 .search-chat {
     width: 100%;
-    height: 8%;
+    height: var(--search-chat);
     /*debug*/
     border: 1px solid black;
 }
 
+/*contacts-list*/
+
+
+.contacts-list {
+    overflow-y: auto;
+    height: calc(100% - (var(--search-chat) + var(--notification) + var(--header)));
+}
+
 .card-chat {
     width: 100%;
-    padding: 1.5rem;   /*da vedere bene che non va bene*/
     /*dubug*/
     background-color:var(--color-white);
     border: 1px solid black;
+}
+
+.div-img {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(15, 54, 9);
+    border-radius: 50%;
+}
+
+/*tablet*/ 
+@media screen and (max-width: 540px) {
+    .contacts {
+        width: 60px;
+        min-width: 60px;
+          /*de vedere bene al di sotto taglia l'immagine*/
+    }    
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+    .contacts {
+        display: none;
+    }    
 }
 
 
@@ -128,3 +163,32 @@ container-large   *
     /*debug*/
     background-color: rgb(33, 96, 151);
 }
+
+.chat.flex {
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer {
+    width: 100%;
+    height: 10%;
+    background-color: var(--color-white);
+    /*debuug*/
+    border: 1px solid black;
+}
+
+/*tablet*/ 
+@media screen and (max-width: 540px) {
+    .chat {
+        width: calc(100% - 60px);
+    }    
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+    .chat {
+        width: 100%;
+    }    
+}
+  
