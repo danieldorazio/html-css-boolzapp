@@ -9,9 +9,12 @@
 --color-gray-header: #eaeaea;
 --color-white: #ffffff;
 --color-gray-icons: #b1b1b1;
+--color-white-button:#f2fbff;
+--color-gray-allert:#517789;
+--color-white-search:#fafafa;
 
     /*heigth-contacts*/
-    --header: 60px;
+    --header: 65px;
     --notification: 70px;
     --search-chat: 40px;
 }
@@ -63,6 +66,8 @@ button {
     border-radius: 50%;
     border: 0;
     cursor: pointer;
+    background-color: var(--color-white-button);
+    margin: .6rem;
 }
 
 .header ul.flex {
@@ -102,6 +107,7 @@ container-large   *
 }
 
 /*TABLET*/
+
 @media screen and (max-width: 540px) {
     .wrapper {
         width: 100%;
@@ -121,18 +127,19 @@ container-large   *
 #contacts {
     height: 100%;
     width: 40%;
-    min-width: 200px;
+    min-width: 300px;
     background-color: var(--color-white);
 }
 
 /*CONTACTS HEADER*/
+
 #contacts .header.flex {
     align-items: center;
     justify-content: space-between;
 }
 
 
-.profile{
+.profile {
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -140,7 +147,7 @@ container-large   *
 
 }
 
-
+/* NOTIFICAZION */
 
 .notification {
     height:var(--notification);
@@ -148,12 +155,64 @@ container-large   *
     background-color:var(--color-sky-blue) ;
 }
 
+.notification.flex {
+    align-items: center;
+    gap: 1rem;
+}
+
+.notification .btn-profile.allert> i {
+    color: var(--color-sky-blue);
+    font-size: 1.2rem;
+}
+
+.notification .allert-text {
+    margin-right: 1rem;
+}
+.notification .allert-text> a{
+    color: var(--color-gray-allert);
+}
+
+
+/* SEARCH CHAT */
+
 .search-chat {
     width: 100%;
     height: var(--search-chat);
+    background-color: var(--color-white-search) ;
     /*debug*/
     border: 1px solid black;
 }
+
+.search-chat.flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.search-chat .search {
+    width: 95%;
+    height: 75%;
+    border: 1px solid rgba(0, 0, 0, 0.071);
+}
+
+.search-chat .search.flex {
+    align-items: center;
+}
+
+.search-chat .search> i{
+    margin: 0 1rem;
+}
+
+.search-chat .search> input {
+    width: 85%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+
+
 
 /*contacts-list*/
 
