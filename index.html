@@ -10,6 +10,7 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)">
 
 </head>
 <body>
@@ -23,7 +24,9 @@
 
                 <!-- HEADER -->
                 <header class="header flex">
-                    <button class="btn-profile"><img class="profile" src="img/avatar_io.jpg" alt=""></button>
+                    <button class="btn-profile">
+                        <img class="profile" src="img/avatar_io.jpg" alt="">
+                    </button>
                     <ul class="icons-list flex">
                         <li>
                             <button class="icons">
@@ -239,94 +242,111 @@
                     </ul>
                 </header>
 
-                <!-- MAIN -->
+                <!-- MAIN da vedere hover-->  
                 <main class="chat-main">
-                    <div class="message-main flex ">
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et veniam placeat quas doloribus! Libero ipsum odio blanditiis sint cupiditate, itaque, sunt iusto molestiae, velit voluptates odit fugiat tenetur quisquam.
+                    <div class="message-main flex">
+                        <div class="message inviato relative">
+                            <div class="angle">
+                                <i class="fa-solid fa-angle-down"></i>  
+                            </div>
+                            <div class="info-message">
+                                <p>Info messaggio</p>
+                                <p>Cancella messaggio</p> 
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et veniam placeat quas doloribus! Libero ipsum odio blanditiis sint cupiditate, itaque, sunt iusto molestiae, velit voluptates odit fugiat tenetur quisquam.
+                            </p>
                         </div>
-
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-
-                        <div class="message inviato">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        <div class="message ricevuto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, itaque, necessitatibus doloribus at eaque aliquam quod, numquam ratione unde dolores quam commodi harum aliquid nulla ab voluptas? Esse, fugiat ut.
-                        </div>
-                        
                     </div>
 
-                    
-                    
+                    <div class="message-main flex">
+                        <div class="message ricevuto relative">
+                            <div class="angle">
+                                <i class="fa-solid fa-angle-down"></i>  
+                            </div>
+                            <div class="info-message">
+                                <p>Info messaggio</p>
+                                <p>Cancella messaggio</p> 
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et veniam placeat quas doloribus! Libero ipsum odio blanditiis sint cupiditate, itaque, sunt iusto molestiae, velit voluptates odit fugiat tenetur quisquam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="message-main flex">
+                        <div class="message inviato relative">
+                            <div class="angle">
+                                <i class="fa-solid fa-angle-down"></i>  
+                            </div>
+                            <div class="info-message">
+                                <p>Info messaggio</p>
+                                <p>Cancella messaggio</p> 
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et veniam placeat quas doloribus! Libero ipsum odio blanditiis sint cupiditate, itaque, sunt iusto molestiae, velit voluptates odit fugiat tenetur quisquam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="message-main flex">
+                        <div class="message ricevuto relative">
+                            <div class="angle">
+                                <i class="fa-solid fa-angle-down"></i>  
+                            </div>
+                            <div class="info-message">
+                                <p>Info messaggio</p>
+                                <p>Cancella messaggio</p> 
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et veniam placeat quas doloribus! Libero ipsum odio blanditiis sint cupiditate, itaque, sunt iusto molestiae, velit voluptates odit fugiat tenetur quisquam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="message-main flex">
+                        <div class="message inviato relative">
+                            <div class="angle">
+                                <i class="fa-solid fa-angle-down"></i>  
+                            </div>
+                            <div class="info-message">
+                                <p>Info messaggio</p>
+                                <p>Cancella messaggio</p> 
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et veniam placeat quas doloribus! Libero ipsum odio blanditiis sint cupiditate, itaque, sunt iusto molestiae, velit voluptates odit fugiat tenetur quisquam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="message-main flex">
+                        <div class="message ricevuto relative">
+                            <div class="angle">
+                                <i class="fa-solid fa-angle-down"></i>  
+                            </div>
+                            <div class="info-message">
+                                <p>Info messaggio</p>
+                                <p>Cancella messaggio</p> 
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et veniam placeat quas doloribus! Libero ipsum odio blanditiis sint cupiditate, itaque, sunt iusto molestiae, velit voluptates odit fugiat tenetur quisquam.
+                            </p>
+                        </div>
+                    </div>  
                 </main>
 
                 <!-- FOOTER -->
                 <footer  class="footer flex">
-                    <div class="icons"><i class="fa-regular fa-face-smile"></i></i></div>
+                    <button class="icons">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </button>
                     <form class="text">
                         <label for="text"></label>
                         <textarea name="text" id="text" placeholder="Scrivi un messaggio"></textarea>
                     </form>
-                    <div class="icons"><i class="fa-solid fa-microphone"></i></div>
+                    <button class="icons">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
                 </footer>
             </div>
         </div>
