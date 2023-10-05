@@ -4,22 +4,24 @@
 :root {
     /*color*/
 --color-green-exit:#009688;
---color-gray-exit: #d3dbda;
---color-sky-blue:#8edafc;
---color-gray-header: #eaeaea;
---color-white: #ffffff;
 --color-gray-icons: #b1b1b1;
+--color-gray-exit: #d3dbda;
+--color-green-message:#d5f9ba;
+--color-gray-header: #eaeaea;
+--color-sky-blue:#8edafc;
 --color-white-button:#f2fbff;
+--color-white: #ffffff;
 --color-gray-allert:#517789;
 --color-white-search:#fafafa;
---color-green-message:#d5f9ba;
+--color-white-footer:#f3eeea;
+--color-gray-icons-footer:#6b7376;
                     
 
     /*heigth-contacts*/
     --header: 65px;
     --notification: 70px;
     --search-chat: 40px;
-    --footer-new-message: 65px;
+    --footer-new-message: 55px;
 
     /*margin*/
     --margin-btn: .6rem;
@@ -27,9 +29,6 @@
     /* profile */
     --size-img:50px;
 }
-
-
-
 
 /********************
          RESET      *
@@ -125,12 +124,7 @@ container-large   *
 
 /*TABLET*/
 
-@media screen and (max-width: 992px) {
-    .wrapper {
-        width: 100%;
-        height: 100vh;
-    }
-    
+@media screen and (max-width: 992px) {    
     .container-large {
         width: 100%;
         height: 100%;
@@ -348,8 +342,42 @@ container-large   *
 }
 
 
+/* FOOTER */
+#chat .footer {
+    width: 100%;
+    height: var(--footer-new-message);
+    background-color: var(--color-white-footer);
+}
+
+#chat .footer.flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .icons {
+    font-size: 1.2rem;
+    color: var(--color-gray-icons-footer);
+    margin: 1.5rem;
+}
+
+.footer .text {
+    width: 100%;
+}
+.footer textarea {
+    height: 40px;
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+    border-radius: 4px;
+    border: none;    
+}
+
 /*tablet*/ 
-@media screen and (max-width: 992px) {   
+@media screen and (max-width: 992px) {
+    .chat {
+        width: 100%;
+    }  
+    
     #chat .chat-main {
         padding: 20px 0 0 0; 
     }
@@ -359,26 +387,9 @@ container-large   *
     }
 }
 
-
-
-.footer {
-    width: 100%;
-    height: var(--footer-new-message);
-    background-color: var(--color-white);
-    /*debuug*/
-    border: 1px solid black;
-}
-
-/*tablet*/ 
-@media screen and (max-width: 992px) {
-    .chat {
-        width: 100%;
-    }    
-}
-
 /*mobile*/
-@media screen and (max-width: 540px) { /*questa cosa è strana*/
-    .chat {
+@media screen and (max-width: 540px) { 
+    #chat {
         width: 100%;
         height: 100vh;
     }   
@@ -386,6 +397,17 @@ container-large   *
     #chat .header> .icons-list {
         display: none;
     }
-   
+
+    #chat .footer.flex {
+        justify-content: center;
+    }
+
+    #chat .footer .icons{
+        display: none;
+    }
+
+    #chat .footer .text {
+        width: 90%;
+    }   
 }
   
