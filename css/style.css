@@ -63,6 +63,10 @@ body {
     display: flex;
 }
 
+.relative {
+    position: relative;
+}
+
 .header {
     width: 100%;
     height: var(--header);
@@ -314,10 +318,31 @@ container-large   *
 /*CHAT-MAIN*/
 #chat .chat-main {
     width: 100%;
-    height: calc(100% - (var(--header) + var(--footer-new-message)));
-    overflow-y: auto;
-
+     height: calc(100% - (var(--header) + var(--footer-new-message)));
+    overflow-y: auto; 
 }
+#chat .message-main.flex {
+    flex-wrap: wrap;
+    flex-direction: column;  
+}
+
+
+.chat-main .message{
+    width: 300px;
+    margin: .5rem 1rem;
+    /*debug*/ 
+    border: 2px solid black;
+}
+
+.chat-main .message.inviato{
+    align-self: self-end;
+}
+
+.chat-main .message.ricevuto{
+    align-self: self-start;
+}
+
+
 
 
 
