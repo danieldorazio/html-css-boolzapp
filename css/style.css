@@ -12,6 +12,8 @@
 --color-white-button:#f2fbff;
 --color-gray-allert:#517789;
 --color-white-search:#fafafa;
+--color-green-message:#d5f9ba;
+                    
 
     /*heigth-contacts*/
     --header: 65px;
@@ -115,9 +117,9 @@ container-large   *
 ********************/
 
 .container-large {
-    width: 80%;
+    width: 95%;
     height: 90%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -318,34 +320,44 @@ container-large   *
 /*CHAT-MAIN*/
 #chat .chat-main {
     width: 100%;
-     height: calc(100% - (var(--header) + var(--footer-new-message)));
+    padding: 20px;
+    height: calc(100% - (var(--header) + var(--footer-new-message)));
     overflow-y: auto; 
 }
+
 #chat .message-main.flex {
     flex-wrap: wrap;
     flex-direction: column;  
 }
 
-
-.chat-main .message{
-    width: 300px;
-    margin: .5rem 1rem;
-    /*debug*/ 
-    border: 2px solid black;
+.chat-main .message {
+    max-width: 300px;
+    margin: .5rem 2rem;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
-.chat-main .message.inviato{
+.chat-main .message.inviato {
+    background-color: var(--color-green-message);
     align-self: self-end;
 }
 
-.chat-main .message.ricevuto{
+.chat-main .message.ricevuto {
     align-self: self-start;
+    background-color: var(--color-white);
 }
 
 
+/*tablet*/ 
+@media screen and (max-width: 992px) {   
+    #chat .chat-main {
+        padding: 20px 0 0 0; 
+    }
 
-
-
+    .chat-main .message {
+        margin: .5rem 1.5rem;
+    }
+}
 
 
 
