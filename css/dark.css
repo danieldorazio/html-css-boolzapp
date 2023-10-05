@@ -1,0 +1,5 @@
+@media (prefers-color-scheme: dark) {
+    .wrapper {
+        background: linear-gradient(180deg, var(--color-green-exit) 50%, var(--color-gray-exit) 15%);
+    }
+}

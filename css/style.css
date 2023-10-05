@@ -345,6 +345,14 @@ container-large   *
     cursor: pointer;
 }
 
+.chat-main .time {
+    position: absolute;
+    bottom:5px;
+    right: 10px;
+    color: var(--color-gray-icons);
+    font-size: .8rem;
+}
+
 .chat-main .info-message {
     display: none;
     background-color: var(--color-white);
@@ -373,18 +381,11 @@ container-large   *
 }
 
 
-
-
 /* FOOTER */
 #chat .footer {
     width: 100%;
     height: var(--footer-new-message);
     background-color: var(--color-white-footer);
-}
-
-#chat .footer.flex {
-    justify-content: space-between;
-    align-items: center;
 }
 
 .footer .icons {
@@ -393,10 +394,26 @@ container-large   *
     margin: 1.5rem;
 }
 
-.footer .text {
+#chat .footer.flex {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-text.flex {
+    align-items: center;
+}
+
+
+/* FOOTER-TEXT */
+.footer-text {
+    width: 64%;
+}
+
+.footer-text .text {
     width: 100%;
 }
-.footer textarea {
+
+.footer-text textarea {
     height: 40px;
     width: 100%;
     padding: 1rem;
@@ -404,6 +421,35 @@ container-large   *
     border-radius: 4px;
     border: none;  
 }
+
+.footer-text .microphone {
+    display: none;
+}
+
+.footer-text .microphone:active {
+    color: red;
+}
+
+
+/* FOOTER-MICROPHONO */
+details {  /*voglio che si apri a sinistra*/
+    clear: both;
+}
+summary {
+    display: inline-block;
+}
+details> *{
+    display:inline-block;
+}
+
+.footer-registration .icons {
+    margin: 5px;
+}
+
+.footer-registration .microphone:active {
+    color: red;
+}
+
 
 /*tablet*/ 
 @media screen and (max-width: 992px) {
@@ -418,6 +464,21 @@ container-large   *
     .chat-main .message {
         margin: .5rem 1.5rem;
     }
+
+    .footer-registration {
+        display: none;
+    }
+    .footer-text {
+        width: 100%;
+    }
+
+    .footer-text.flex {
+        justify-content: space-between;
+    }
+    
+    .footer-text .microphone {
+        display: inline-block;
+    }
 }
 
 /*mobile*/
@@ -431,15 +492,15 @@ container-large   *
         display: none;
     }
 
-    #chat .footer.flex {
+    #chat .footer-text.flex {
         justify-content: center;
     }
 
-    #chat .footer .icons{
+    #chat .footer-text .icons{
         display: none;
     }
 
-    #chat .footer .text {
+    #chat .footer-text .text {
         width: 90%;
     }   
 }
