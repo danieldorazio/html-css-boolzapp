@@ -17,6 +17,13 @@
     --header: 65px;
     --notification: 70px;
     --search-chat: 40px;
+    --footer-new-message: 65px;
+
+    /*margin*/
+    --margin-btn: .6rem;
+
+    /* profile */
+    --size-img:50px;
 }
 
 
@@ -42,6 +49,7 @@ img {
 
 button {
     border: 0;
+    background-color: transparent;
 }
 
 body {
@@ -65,25 +73,25 @@ body {
 
 /*btn*/
 .btn-profile {
-    height: 50px;
-    width: 50px;
+    height: var(--size-img);
+    width: var(--size-img);
     border-radius: 50%;
     border: 0;
     cursor: pointer;
     background-color: var(--color-white-button);
-    margin: .6rem;
+    margin: var(--margin-btn);
 }
 
 .header ul.flex {
     gap: 1rem;
     margin-right: 1.2rem;
 } 
-.header .icons{
+.header .icons {
     font-size: 1.2rem;
     color: var(--color-gray-icons);
 }
 /********************
-wrapper    *
+         wrapper    *
 ********************/
 
 .wrapper {
@@ -105,14 +113,13 @@ container-large   *
 .container-large {
     width: 80%;
     height: 90%;
-    max-width: 1000px;
-    min-width: 540px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 /*TABLET*/
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 992px) {
     .wrapper {
         width: 100%;
         height: 100vh;
@@ -144,11 +151,10 @@ container-large   *
 
 
 .profile {
-    width: 50px;
-    height: 50px;
+    width: var(--size-img);
+    height: var(--size-img);
     object-fit: cover;
     border-radius: 50%;
-
 }
 
 /* NOTIFICAZION */
@@ -172,7 +178,7 @@ container-large   *
 .notification .allert-text {
     margin-right: 1rem;
 }
-.notification .allert-text> a{
+.notification .allert-text> a {
     color: var(--color-gray-allert);
 }
 
@@ -202,7 +208,7 @@ container-large   *
     align-items: center;
 }
 
-.search-chat .search> i{
+.search-chat .search> i {
     margin: 0 1rem;
     color: var(--color-gray-icons);
 }
@@ -250,22 +256,21 @@ container-large   *
 }
 
 /*tablet*/ 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 992px) {
     #contacts {
-        width: auto;
+        width: auto; 
         min-width: 0;
-       /*de vedere bene al di sotto taglia l'immagine*/
     } 
     
     #contacts .header> .icons-list {
         display: none;
     }
 
-    #contacts .notification{
+    #contacts .notification {
         display: none;
     }
 
-    #contacts .search-chat{
+    #contacts .search-chat {
         display: none;
     }
 
@@ -276,11 +281,12 @@ container-large   *
     }
     .contacts-list {
         height: calc(100% - var(--header));
+        width: 87px;
     }
 }
 
 /*mobile*/
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 540px) {
     #contacts {
         display: none;
     }    
@@ -298,31 +304,51 @@ container-large   *
     background-image: url(../img/mine.jpg);
 }
 
-.chat.flex {
-    flex-direction: column;
+
+/*HEADER*/
+#chat .header.flex {
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
+
+/*CHAT-MAIN*/
+#chat .chat-main {
+    width: 100%;
+    height: calc(100% - (var(--header) + var(--footer-new-message)));
+    overflow-y: auto;
+
+}
+
+
+
+
+
 
 .footer {
     width: 100%;
-    height: 10%;
+    height: var(--footer-new-message);
     background-color: var(--color-white);
     /*debuug*/
     border: 1px solid black;
 }
 
 /*tablet*/ 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 992px) {
     .chat {
-        width: calc(100% - 60px);
+        width: 100%;
     }    
 }
 
 /*mobile*/
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 540px) { /*questa cosa è strana*/
     .chat {
         width: 100%;
-    }    
+        height: 100vh;
+    }   
+    
+    #chat .header> .icons-list {
+        display: none;
+    }
+   
 }
   
