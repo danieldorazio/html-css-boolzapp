@@ -4,18 +4,23 @@
 :root {
     /*color*/
 --color-green-exit:#009688;
---color-gray-icons: #b1b1b1;
 --color-gray-exit: #d3dbda;
---color-green-message:#d5f9ba;
 --color-gray-header: #eaeaea;
---color-sky-blue:#8edafc;
+--color-gray-icons: #b1b1b1;
+--color-notification:#8edafc;
+--color-notification-btn:#ffffff;
+--color-search-exit:#fafafa;
+--color-search:#ffffff;
+--color-contacts:#ffffff;
+--color-contacts-hover:#f4f5f5;
+--color-send-message:#d5f9ba;
+--color-recieved-message:#ffffff;
+--color-footer:#f3eeea;
+--color-textarea-footer:#ffffff;
+--color-gray-icons-footer:#6b7376;
 --color-white-button:#f2fbff;
 --color-white: #ffffff;
 --color-gray-allert:#517789;
---color-white-search:#fafafa;
---color-white-footer:#f3eeea;
---color-gray-icons-footer:#6b7376;
---color-gray-card-chat-hover:#f4f5f5;
                     
 
     /*heigth-contacts*/
@@ -23,6 +28,7 @@
     --notification: 70px;
     --search-chat: 40px;
     --footer-new-message: 55px;
+    --heigth-card-chat: 72px;
 
     /*margin*/
     --margin-btn: .6rem;
@@ -30,6 +36,7 @@
     /* profile */
     --size-img:50px;
 }
+
 
 /********************
          RESET      *
@@ -85,7 +92,6 @@ body {
     border-radius: 50%;
     border: 0;
     cursor: pointer;
-    background-color: var(--color-white-button);
     margin: var(--margin-btn);
 }
 
@@ -141,7 +147,6 @@ container-large   *
     height: 100%;
     width: 40%;
     min-width: 300px;
-    background-color: var(--color-white);
 }
 
 /*CONTACTS HEADER*/
@@ -164,7 +169,7 @@ container-large   *
 .notification {
     height:var(--notification);
     width: 100%;
-    background-color:var(--color-sky-blue) ;
+    background-color:var(--color-notification) ;
 }
 
 .notification.flex {
@@ -172,14 +177,20 @@ container-large   *
     gap: 1rem;
 }
 
+.notification .btn-profile.allert {
+    background-color:var(--color-notification-btn) ;
+}
+
 .notification .btn-profile.allert> i {
     color: var(--color-sky-blue);
     font-size: 1.2rem;
+    color: var(--color-notification);
 }
 
 .notification .allert-text {
     margin-right: 1rem;
 }
+
 .notification .allert-text> a {
     color: var(--color-gray-allert);
 }
@@ -190,9 +201,7 @@ container-large   *
 .search-chat {
     width: 100%;
     height: var(--search-chat);
-    background-color: var(--color-white-search) ;
-    /*debug*/
-    border: 1px solid black;
+    background-color: var(--color-search-exit) ;
 }
 
 .search-chat.flex {
@@ -216,9 +225,12 @@ container-large   *
 }
 
 .search-chat .search> input {
-    width: 85%;
+    width: 100%;
     height: 100%;
     border: 0;
+    outline: none;
+    color: inherit;
+    background-color: var(--color-search);
 }
 
 /*contacts-list*/
@@ -229,13 +241,14 @@ container-large   *
 }
 
 .card-chat {
+    height: var(--heigth-card-chat);
     width: 100%;
-    background-color:var(--color-white);
+    background-color:var(--color-contacts);
     border: 1px solid rgba(0, 0, 0, 0.071);
 }
 
 .card-chat:hover {
-    background-color: var(--color-gray-card-chat-hover);
+    background-color: var(--color-contacts-hover);
 }
 
 .card-chat.flex {
@@ -310,7 +323,6 @@ container-large   *
     background-image: url(../img/mine.jpg);
 }
 
-
 /*HEADER*/
 #chat .header.flex {
     align-items: center;
@@ -331,7 +343,7 @@ container-large   *
 }
 
 .chat-main .message {
-    max-width: 300px;
+    max-width: 65%;
     margin: .5rem 2rem;
     padding: 1rem;
     border-radius: 10px;
@@ -366,18 +378,27 @@ container-large   *
     padding: .5rem 0;
 }
 
-.angle:hover + .info-message {
+ .message-main .angle:hover + .info-message {
     display: inline-block;
 }
 
-.chat-main .message.inviato {
-    background-color: var(--color-green-message);
+.message-main .info-message:hover {
+    display: inline-block;
+}
+
+.message-main .info-message p:hover {
+    background-color: var(--color-gray-card-chat-hover);
+}
+
+
+.chat-main .message.send {
+    background-color: var(--color-send-message);
     align-self: self-end;
 }
 
-.chat-main .message.ricevuto {
+.chat-main .message.recieved {
     align-self: self-start;
-    background-color: var(--color-white);
+    background-color: var(--color-recieved-message);
 }
 
 
@@ -385,7 +406,7 @@ container-large   *
 #chat .footer {
     width: 100%;
     height: var(--footer-new-message);
-    background-color: var(--color-white-footer);
+    background-color: var(--color-footer);
 }
 
 .footer .icons {
@@ -420,6 +441,10 @@ container-large   *
     resize: none;
     border-radius: 4px;
     border: none;  
+    outline: none;
+    overflow: hidden;
+    background-color: var(--color-textarea-footer);
+    color: inherit;
 }
 
 .footer-text .microphone {
@@ -435,9 +460,11 @@ container-large   *
 details {  /*voglio che si apri a sinistra*/
     clear: both;
 }
+
 summary {
     display: inline-block;
 }
+
 details> *{
     display:inline-block;
 }
@@ -446,7 +473,7 @@ details> *{
     margin: 5px;
 }
 
-.footer-registration .microphone:active {
+.footer-registration details:active .microphone {
     color: red;
 }
 
