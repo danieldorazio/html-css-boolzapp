@@ -427,7 +427,7 @@ container-large   *
 
 /* FOOTER-TEXT */
 .footer-text {
-    width: 64%;
+    width: 100%;
 }
 
 .footer-text .text {
@@ -457,24 +457,41 @@ container-large   *
 
 
 /* FOOTER-MICROPHONO */
-details {  /*voglio che si apri a sinistra*/
-    clear: both;
+
+details {
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
 }
 
 summary {
-    display: inline-block;
+    display: block;
 }
 
-details> *{
-    display:inline-block;
+summary:after  {
+    display: block;
+    content: "\f130";
+    font-size: 1.2rem;
+    color: var(--color-gray-icons-footer);
+    font-family: 'FontAwesome';
+    margin: 20px;
+}
+
+.det-main.flex {  
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    gap: .5rem;
+    right: 200px;
+    bottom: -9px;
 }
 
 .footer-registration .icons {
     margin: 5px;
 }
 
-.footer-registration details:active .microphone {
-    color: red;
+footer:has(details[open]) .footer-text form.text {
+    width: calc(100% - 270px);
 }
 
 
@@ -490,21 +507,6 @@ details> *{
 
     .chat-main .message {
         margin: .5rem 1.5rem;
-    }
-
-    .footer-registration {
-        display: none;
-    }
-    .footer-text {
-        width: 100%;
-    }
-
-    .footer-text.flex {
-        justify-content: space-between;
-    }
-    
-    .footer-text .microphone {
-        display: inline-block;
     }
 }
 
@@ -524,6 +526,10 @@ details> *{
     }
 
     #chat .footer-text .icons{
+        display: none;
+    }
+
+    #chat .footer-registration {
         display: none;
     }
 
