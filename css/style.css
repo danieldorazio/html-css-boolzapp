@@ -21,16 +21,18 @@
 --color-white-button:#f2fbff;
 --color-white: #ffffff;
 --color-gray-allert:#517789;
+--glow-color: #d9dbdf;
                     
 
     /*heigth-contacts*/
     --header: 65px;
     --notification: 70px;
     --search-chat: 40px;
-    --footer-new-message: 55px;
+    --footer-new-message: 70px;
     --heigth-card-chat: 72px;
 
     /*margin*/
+    --margin-icon: 1rem;
     --margin-btn: .6rem;
 
     /* profile */
@@ -96,13 +98,43 @@ body {
 }
 
 .header ul.flex {
-    gap: 1rem;
     margin-right: 1.2rem;
 } 
 .header .icons {
     font-size: 1.2rem;
     color: var(--color-gray-icons);
 }
+
+/*button transition*/
+.glowing-btn {
+    position: relative; 
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%; 
+    cursor: pointer;
+    perspective: 2em;
+  }
+
+  
+.glowing-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    transition: opacity 100ms linear;
+    border-radius: 50%;
+  }
+
+.glowing-btn:hover:after {
+    opacity: 1;
+  }
+
+  
 /********************
          wrapper    *
 ********************/
@@ -412,7 +444,7 @@ container-large   *
 .footer .icons {
     font-size: 1.2rem;
     color: var(--color-gray-icons-footer);
-    margin: 1.5rem;
+    margin: var(--margin-icon);
 }
 
 #chat .footer.flex {
@@ -447,14 +479,6 @@ container-large   *
     color: inherit;
 }
 
-.footer-text .microphone {
-    display: none;
-}
-
-.footer-text .microphone:active {
-    color: red;
-}
-
 
 /* FOOTER-MICROPHONO */
 
@@ -477,6 +501,14 @@ summary:after  {
     margin: 20px;
 }
 
+summary:hover:after {  /*continuare qui*/
+    color: red;
+    background-color: yellow;
+    width: 30px;
+    height: 30px;
+    
+}
+
 .det-main.flex {  
     width: 100%;
     align-items: center;
@@ -491,7 +523,7 @@ summary:after  {
 }
 
 footer:has(details[open]) .footer-text form.text {
-    width: calc(100% - 270px);
+    width: calc(100% - 275px);
 }
 
 
@@ -537,4 +569,12 @@ footer:has(details[open]) .footer-text form.text {
         width: 90%;
     }   
 }
+
+
+
+  
+ 
+  
+ 
+
   
