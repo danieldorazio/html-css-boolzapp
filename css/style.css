@@ -18,17 +18,19 @@
 --color-footer:#f3eeea;
 --color-textarea-footer:#ffffff;
 --color-gray-icons-footer:#6b7376;
+--color-microphone-hover: red;
+--glow-color: #d9dbdf;
+/************************************/
 --color-white-button:#f2fbff;
 --color-white: #ffffff;
 --color-gray-allert:#517789;
---glow-color: #d9dbdf;
                     
 
     /*heigth-contacts*/
     --header: 65px;
     --notification: 70px;
     --search-chat: 40px;
-    --footer-new-message: 70px;
+    --footer-new-message: 71.5px;
     --heigth-card-chat: 72px;
 
     /*margin*/
@@ -493,20 +495,22 @@ summary {
 }
 
 summary:after  {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
     content: "\f130";
     font-size: 1.2rem;
     color: var(--color-gray-icons-footer);
     font-family: 'FontAwesome';
-    margin: 20px;
+    cursor: pointer;
 }
 
-summary:hover:after {  /*continuare qui*/
-    color: red;
-    background-color: yellow;
-    width: 30px;
-    height: 30px;
-    
+summary:hover:after { 
+    color: var(--color-microphone-hover);
+    background-color: var(--glow-color);
 }
 
 .det-main.flex {  
@@ -515,7 +519,7 @@ summary:hover:after {  /*continuare qui*/
     position: absolute;
     gap: .5rem;
     right: 200px;
-    bottom: -9px;
+    bottom: 2px;
 }
 
 .footer-registration .icons {
@@ -523,7 +527,13 @@ summary:hover:after {  /*continuare qui*/
 }
 
 footer:has(details[open]) .footer-text form.text {
-    width: calc(100% - 275px);
+    display: none;
+    /*per variare la lunghezza */
+   /* width: calc(100% - 275px);*/
+}
+
+footer:has(details[open]) .footer-text button.glowing-btn {
+    display: none;
 }
 
 
