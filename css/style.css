@@ -529,7 +529,7 @@ summary:hover:after {
 footer:has(details[open]) .footer-text form.text {
     display: none;
     /*per variare la lunghezza */
-   /* width: calc(100% - 275px);*/
+   /* width: calc(100% - 275px); */
 }
 
 footer:has(details[open]) .footer-text button.glowing-btn {
